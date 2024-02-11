@@ -1,0 +1,4 @@
+- Next
+- Yarn berry
+- Typescript
+- Tailwind
