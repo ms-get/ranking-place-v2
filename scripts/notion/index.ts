@@ -16,7 +16,7 @@ const run = async () => {
     start_cursor: undefined,
   };
 
-  const posts = {};
+  const posts: PartialDatabaseObjectResponse[] = [];
 
   while (true) {
     const res = await retry(
@@ -37,10 +37,7 @@ const run = async () => {
       },
     );
 
-    res.results.forEach((result) => {
-      // @ts-ignore
-      posts[result.properties.name.title[0].plain_text] = result;
-    });
+    posts.push(...(res.results as any));
 
     if (!res.has_more) {
       break;

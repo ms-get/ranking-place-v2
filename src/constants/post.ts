@@ -5,23 +5,15 @@ const post = [
     created_time: "2024-02-12T12:06:00.000Z",
     last_edited_time: "2024-02-12T12:06:00.000Z",
     created_by: { object: "user", id: "4ea46ae5-b051-4e61-b69c-6bbde16eb9ab" },
-    last_edited_by: {
-      object: "user",
-      id: "4ea46ae5-b051-4e61-b69c-6bbde16eb9ab",
-    },
+    last_edited_by: { object: "user", id: "4ea46ae5-b051-4e61-b69c-6bbde16eb9ab" },
     cover: null,
     icon: null,
-    parent: {
-      type: "database_id",
-      database_id: "7ae88a0e-b866-4fc7-8348-1d8e037bddf1",
-    },
+    parent: { type: "database_id", database_id: "7ae88a0e-b866-4fc7-8348-1d8e037bddf1" },
     archived: false,
     properties: {
-      "최종 편집 일시": {
-        id: "zo%7D~",
-        type: "last_edited_time",
-        last_edited_time: "2024-02-12T12:06:00.000Z",
-      },
+      description: { id: "TkoZ", type: "rich_text", rich_text: [] },
+      title: { id: "nCmP", type: "rich_text", rich_text: [] },
+      lastModified: { id: "zo%7D~", type: "last_edited_time", last_edited_time: "2024-02-12T12:06:00.000Z" },
       name: {
         id: "title",
         type: "title",
@@ -52,23 +44,15 @@ const post = [
     created_time: "2024-02-12T11:31:00.000Z",
     last_edited_time: "2024-02-12T12:46:00.000Z",
     created_by: { object: "user", id: "4ea46ae5-b051-4e61-b69c-6bbde16eb9ab" },
-    last_edited_by: {
-      object: "user",
-      id: "4ea46ae5-b051-4e61-b69c-6bbde16eb9ab",
-    },
+    last_edited_by: { object: "user", id: "4ea46ae5-b051-4e61-b69c-6bbde16eb9ab" },
     cover: null,
     icon: null,
-    parent: {
-      type: "database_id",
-      database_id: "7ae88a0e-b866-4fc7-8348-1d8e037bddf1",
-    },
+    parent: { type: "database_id", database_id: "7ae88a0e-b866-4fc7-8348-1d8e037bddf1" },
     archived: false,
     properties: {
-      "최종 편집 일시": {
-        id: "zo%7D~",
-        type: "last_edited_time",
-        last_edited_time: "2024-02-12T12:46:00.000Z",
-      },
+      description: { id: "TkoZ", type: "rich_text", rich_text: [] },
+      title: { id: "nCmP", type: "rich_text", rich_text: [] },
+      lastModified: { id: "zo%7D~", type: "last_edited_time", last_edited_time: "2024-02-12T12:46:00.000Z" },
       name: {
         id: "title",
         type: "title",
