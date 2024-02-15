@@ -8,9 +8,9 @@ type WithAuth<P> = P & {
   auth?: string;
 };
 
-const run = async () => {
-  const notionAPI = new Client({ auth: NOTION.AUTH_KEY });
+export const notionAPI = new Client({ auth: NOTION.AUTH_KEY });
 
+const run = async () => {
   const params: WithAuth<QueryDatabaseParameters> = {
     database_id: NOTION.DATABASE_ID,
     start_cursor: undefined,
