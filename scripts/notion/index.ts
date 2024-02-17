@@ -10,12 +10,7 @@ type WithAuth<P> = P & {
 
 export const notionAPI = new Client({ auth: NOTION.AUTH_KEY });
 
-const run = async () => {
-  const params: WithAuth<QueryDatabaseParameters> = {
-    database_id: NOTION.DATABASE_ID,
-    start_cursor: undefined,
-  };
-
+const getNotion = async (params: WithAuth<QueryDatabaseParameters>) => {
   const posts: PartialDatabaseObjectResponse[] = [];
 
   while (true) {
@@ -46,7 +41,24 @@ const run = async () => {
     params.start_cursor = res.next_cursor as string;
   }
 
-  makePostFile(posts);
+  return posts;
+};
+
+const run = async () => {
+  const defaultParams = { start_cursor: undefined };
+
+  const posts = await getNotion({
+    ...defaultParams,
+    database_id: NOTION.DATABASE_ID,
+  });
+
+  const enPosts = await getNotion({
+    ...defaultParams,
+    database_id: NOTION.EN_DATABASE_ID,
+  });
+
+  makePostFile(posts, "post");
+  makePostFile(enPosts, "enPost");
 };
 
 run();
