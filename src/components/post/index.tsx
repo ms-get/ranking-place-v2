@@ -1,32 +1,38 @@
 "use client";
 
-import { exampleData } from "@/app/[id]/constants";
 import { useScroll } from "@/hooks/useScroll";
 import { Header } from "../header";
 import Image from "next/image";
 import { Markdown } from "./Markdown";
 import { Lang } from "@/helpers/lang";
-import { LastModified } from "./lastModified";
 import { usePost } from "@/hooks/usePost";
 import { RecommendPosts } from "./recommendPosts";
 import { ContentHeader } from "./ContentHeader";
+import { NextHead } from "../Head";
 
 interface IProps {
   lang: Lang;
 }
 
 export const Post = ({ lang }: IProps) => {
-  const { title, subTitle, image, articles } = exampleData;
   const { scaleImageSize, scrollOpacity } = useScroll();
   const { getPost } = usePost();
   const post = getPost(lang);
 
   if (!post) return null;
 
-  const { lastModified, content } = post;
+  const { lastModified, content, image, title, description } = post;
 
   return (
     <>
+      <NextHead
+        lastModified={lastModified}
+        title={title}
+        description={description}
+        image={image}
+        keyword={""}
+        subject={description}
+      />
       <Header />
       <div className="relative mt-[100vh] lg:mt-0">
         <div
@@ -41,7 +47,7 @@ export const Post = ({ lang }: IProps) => {
             height={326}
             alt="추천 아티클 이미지"
           />
-          <ContentHeader title={title} subTitle={subTitle} lastModified={lastModified} />
+          <ContentHeader title={title} subTitle={description} lastModified={lastModified} />
         </div>
         <main className="relative z-10 top-0 flex flex-col items-center bg-white pt-10 pb-20">
           <Markdown content={content} />
