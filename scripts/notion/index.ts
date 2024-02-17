@@ -57,8 +57,8 @@ const run = async () => {
     database_id: NOTION.EN_DATABASE_ID,
   });
 
-  makePostFile(posts, "post");
-  makePostFile(enPosts, "enPost");
+  makePostFile(posts, "posts");
+  makePostFile(enPosts, "enPosts");
 };
 
 run();

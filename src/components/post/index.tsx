@@ -5,12 +5,25 @@ import { useScroll } from "@/hooks/useScroll";
 import { Header } from "../header";
 import Image from "next/image";
 import { Markdown } from "./Markdown";
-import { post } from "@/constants/post";
-import { postType } from "@/constants/post";
+import { Lang } from "@/helpers/lang";
+import { LastModified } from "./lastModified";
+import { usePost } from "@/hooks/usePost";
+import { RecommendPosts } from "./recommendPosts";
+import { ContentHeader } from "./ContentHeader";
 
-export const Post = () => {
-  const { title, subTitle, date, image, content, articles } = exampleData;
+interface IProps {
+  lang: Lang;
+}
+
+export const Post = ({ lang }: IProps) => {
+  const { title, subTitle, image, articles } = exampleData;
   const { scaleImageSize, scrollOpacity } = useScroll();
+  const { getPost } = usePost();
+  const post = getPost(lang);
+
+  if (!post) return null;
+
+  const { lastModified, content } = post;
 
   return (
     <>
@@ -28,37 +41,11 @@ export const Post = () => {
             height={326}
             alt="추천 아티클 이미지"
           />
-          <div className=" relative bg-white p-8 pt-[calc(10vh+24px)] lg:pt-6 flex flex-col gap-4">
-            <h1 className="mt-11 text-[5vw] lg:text-4xl font-bold leading-[1.15] mb-6 underline">{title}</h1>
-            <p className="text-xl lg:text-base">{subTitle}</p>
-            <p className="text-[1rem] lg:text-sm">{date}</p>
-          </div>
+          <ContentHeader title={title} subTitle={subTitle} lastModified={lastModified} />
         </div>
         <main className="relative z-10 top-0 flex flex-col items-center bg-white pt-10 pb-20">
-          <section className="max-w-[800px] px-4 w-full mb-10 whitespace-pre-wrap ">
-            <Markdown content={post[1].content} />
-          </section>
-          <aside className="max-w-[1140px] w-full px-3 xl:px-2">
-            <p className="my-4 text-left w-full text-xl font-bold xl:w-[560px] mx-auto">추천 아티클</p>
-            <div className="flex flex-wrap xl:flex-col gap-4 justify-start items-center">
-              {articles.map(({ title, subTitle, date }) => (
-                <article className="w-[260px] xl:w-[560px] flex flex-col xl:flex-row gap-4 max-w-full" key={subTitle}>
-                  <Image
-                    className=" bg-black w-full h-[326px] sm:h-[200px] max-w-[350px] sm:w-[180px] xl:w-full object-cover rounded-sm"
-                    src={image}
-                    width={260}
-                    height={326}
-                    alt="추천 아티클 이미지"
-                  />
-                  <div className="flex flex-col gap-4">
-                    <h2 className=" text-3xl font-bold xl:text-[1.4rem]">{title}</h2>
-                    <p>{subTitle}</p>
-                    <p>{date}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </aside>
+          <Markdown content={content} />
+          <RecommendPosts lang={lang} />
         </main>
       </div>
     </>

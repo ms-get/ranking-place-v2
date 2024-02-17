@@ -1,12 +1,12 @@
 import { Post } from "@/components/post";
-import { enPost } from "@/constants/enPost";
+import { enPosts } from "@/constants/enPosts";
 
 export async function generateStaticParams() {
-  return enPost.map((post) => ({
+  return enPosts.map((post) => ({
     id: post.id.toString(),
   }));
 }
 
 export default async () => {
-  return <Post />;
+  return <Post lang={"ko"} />;
 };

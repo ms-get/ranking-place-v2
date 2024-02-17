@@ -7,8 +7,8 @@ interface IProps {
 
 export const Markdown = ({ content }: IProps) => {
   return (
-    <div className="markdown-body">
+    <section className="max-w-[800px] px-4 w-full mb-10 whitespace-pre-wrap markdown-body">
       <LibMarkdown>{content}</LibMarkdown>
-    </div>
+    </section>
   );
 };
