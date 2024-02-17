@@ -1,7 +1,4 @@
-export default function Home() {
-  return (
-    <main>
-      <h1>Ranking Place</h1>
-    </main>
-  );
-}
+import { PostCardWrapper } from "@/components/home/PostCardWrapper";
+import { posts } from "@/constants/posts";
+
+export default () => <PostCardWrapper posts={posts} lang={"ko"} />;
