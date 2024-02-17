@@ -1,7 +1,12 @@
-"use client";
-
 import { Post } from "@/components/post";
+import { post } from "@/constants/post";
 
-export default () => {
+export async function generateStaticParams() {
+  return post.map((post: any) => ({
+    id: post.id.toString(),
+  }));
+}
+
+export default async () => {
   return <Post />;
 };

@@ -8,7 +8,7 @@ import { Markdown } from "./Markdown";
 import { post } from "@/constants/post";
 import { postType } from "@/constants/post";
 
-export const Post = ({}: postType) => {
+export const Post = () => {
   const { title, subTitle, date, image, content, articles } = exampleData;
   const { scaleImageSize, scrollOpacity } = useScroll();
 
