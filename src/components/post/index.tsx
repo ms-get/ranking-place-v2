@@ -8,13 +8,14 @@ import { Lang } from "@/helpers/lang";
 import { usePost } from "@/hooks/usePost";
 import { RecommendPosts } from "./recommendPosts";
 import { ContentHeader } from "./ContentHeader";
-import { NextHead } from "../Head";
+import { useAmplitude } from "@/hooks/useAmplitude";
 
 interface IProps {
   lang: Lang;
 }
 
 export const Post = ({ lang }: IProps) => {
+  useAmplitude();
   const { scaleImageSize, scrollOpacity } = useScroll();
   const { getPost } = usePost();
   const post = getPost(lang);
@@ -25,21 +26,13 @@ export const Post = ({ lang }: IProps) => {
 
   return (
     <>
-      <NextHead
-        lastModified={lastModified}
-        title={title}
-        description={description}
-        image={image}
-        keyword={""}
-        subject={description}
-      />
       <Header />
       <div className="relative mt-[100vh] lg:mt-0">
         <div
           className="fixed lg:relative w-full h-[100vh] lg:h-auto flex lg:flex-col top-0 overflow-hidden"
           style={{ opacity: scrollOpacity }}
         >
-          <Image
+          <img
             style={{ scale: scaleImageSize }}
             className="w-[50%] lg:w-full lg:h-[400px] object-cover"
             src={image}
@@ -51,7 +44,7 @@ export const Post = ({ lang }: IProps) => {
         </div>
         <main className="relative z-10 top-0 flex flex-col items-center bg-white pt-10 pb-20">
           <Markdown content={content} />
-          <RecommendPosts lang={lang} />
+          {/* <RecommendPosts lang={lang} /> */}
         </main>
       </div>
     </>

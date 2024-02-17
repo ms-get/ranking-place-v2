@@ -1,8 +1,11 @@
+"use client";
+
 import { posts, postsType } from "@/constants/posts";
 import { PostCard } from "./PostCard";
 import { enPosts, enPostsType } from "@/constants/enPosts";
 import { Lang } from "@/helpers/lang";
 import { localCurry } from "@/helpers/localization";
+import { useAmplitude } from "@/hooks/useAmplitude";
 
 interface IProps {
   posts: typeof posts | typeof enPosts;
@@ -11,6 +14,9 @@ interface IProps {
 
 export const PostCardWrapper = ({ posts, lang }: IProps) => {
   const local = localCurry(lang);
+
+  useAmplitude();
+
   return (
     <div className="flex justify-center min-h-full">
       <div className=" max-w-[1128px] w-[1128px] my-32 px-4">

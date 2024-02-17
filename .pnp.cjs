@@ -26,6 +26,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@amplitude/analytics-browser", "npm:2.4.1"],\
           ["@notionhq/client", "npm:2.2.14"],\
           ["@types/async-retry", "npm:1.4.8"],\
           ["@types/node", "npm:20.11.19"],\
@@ -67,6 +68,88 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../.yarn/berry/cache/@alloc-quick-lru-npm-5.2.0-eb83517088-10c0.zip/node_modules/@alloc/quick-lru/",\
         "packageDependencies": [\
           ["@alloc/quick-lru", "npm:5.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@amplitude/analytics-browser", [\
+      ["npm:2.4.1", {\
+        "packageLocation": "../../../.yarn/berry/cache/@amplitude-analytics-browser-npm-2.4.1-9442f85aeb-10c0.zip/node_modules/@amplitude/analytics-browser/",\
+        "packageDependencies": [\
+          ["@amplitude/analytics-browser", "npm:2.4.1"],\
+          ["@amplitude/analytics-client-common", "npm:2.0.11"],\
+          ["@amplitude/analytics-core", "npm:2.2.0"],\
+          ["@amplitude/analytics-types", "npm:2.4.0"],\
+          ["@amplitude/plugin-page-view-tracking-browser", "npm:2.1.1"],\
+          ["@amplitude/plugin-web-attribution-browser", "npm:2.1.1"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@amplitude/analytics-client-common", [\
+      ["npm:2.0.11", {\
+        "packageLocation": "../../../.yarn/berry/cache/@amplitude-analytics-client-common-npm-2.0.11-cacf2ff063-10c0.zip/node_modules/@amplitude/analytics-client-common/",\
+        "packageDependencies": [\
+          ["@amplitude/analytics-client-common", "npm:2.0.11"],\
+          ["@amplitude/analytics-connector", "npm:1.5.0"],\
+          ["@amplitude/analytics-core", "npm:2.2.0"],\
+          ["@amplitude/analytics-types", "npm:2.4.0"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@amplitude/analytics-connector", [\
+      ["npm:1.5.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/@amplitude-analytics-connector-npm-1.5.0-5120848519-10c0.zip/node_modules/@amplitude/analytics-connector/",\
+        "packageDependencies": [\
+          ["@amplitude/analytics-connector", "npm:1.5.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@amplitude/analytics-core", [\
+      ["npm:2.2.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/@amplitude-analytics-core-npm-2.2.0-d334627421-10c0.zip/node_modules/@amplitude/analytics-core/",\
+        "packageDependencies": [\
+          ["@amplitude/analytics-core", "npm:2.2.0"],\
+          ["@amplitude/analytics-types", "npm:2.4.0"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@amplitude/analytics-types", [\
+      ["npm:2.4.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/@amplitude-analytics-types-npm-2.4.0-5f3c6ff304-10c0.zip/node_modules/@amplitude/analytics-types/",\
+        "packageDependencies": [\
+          ["@amplitude/analytics-types", "npm:2.4.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@amplitude/plugin-page-view-tracking-browser", [\
+      ["npm:2.1.1", {\
+        "packageLocation": "../../../.yarn/berry/cache/@amplitude-plugin-page-view-tracking-browser-npm-2.1.1-c04f73fdfa-10c0.zip/node_modules/@amplitude/plugin-page-view-tracking-browser/",\
+        "packageDependencies": [\
+          ["@amplitude/plugin-page-view-tracking-browser", "npm:2.1.1"],\
+          ["@amplitude/analytics-client-common", "npm:2.0.11"],\
+          ["@amplitude/analytics-types", "npm:2.4.0"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@amplitude/plugin-web-attribution-browser", [\
+      ["npm:2.1.1", {\
+        "packageLocation": "../../../.yarn/berry/cache/@amplitude-plugin-web-attribution-browser-npm-2.1.1-adc7637e45-10c0.zip/node_modules/@amplitude/plugin-web-attribution-browser/",\
+        "packageDependencies": [\
+          ["@amplitude/plugin-web-attribution-browser", "npm:2.1.1"],\
+          ["@amplitude/analytics-client-common", "npm:2.0.11"],\
+          ["@amplitude/analytics-core", "npm:2.2.0"],\
+          ["@amplitude/analytics-types", "npm:2.4.0"],\
+          ["tslib", "npm:2.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5428,6 +5511,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["ranking-place", "workspace:."],\
+          ["@amplitude/analytics-browser", "npm:2.4.1"],\
           ["@notionhq/client", "npm:2.2.14"],\
           ["@types/async-retry", "npm:1.4.8"],\
           ["@types/node", "npm:20.11.19"],\
