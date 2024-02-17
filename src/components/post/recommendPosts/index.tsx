@@ -1,4 +1,3 @@
-import { posts, postsType } from "@/constants/posts";
 import { getDateFormat } from "@/helpers/date";
 import { Lang } from "@/helpers/lang";
 import { localCurry } from "@/helpers/localization";
@@ -14,7 +13,6 @@ export const RecommendPosts = ({ lang }: IProps) => {
   const local = localCurry(lang);
   const { recommendPost } = usePost();
 
-  console.log(recommendPost(lang), posts);
   return (
     <aside className="max-w-[1140px] w-full px-3 xl:px-2">
       <p className="my-4 text-left w-full max-w-full text-xl font-bold xl:w-[560px] mx-auto">{local("추천 아티클")}</p>
