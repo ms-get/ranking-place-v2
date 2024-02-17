@@ -44,7 +44,7 @@ export const Post = ({ lang }: IProps) => {
         </div>
         <main className="relative z-10 top-0 flex flex-col items-center bg-white pt-10 pb-20">
           <Markdown content={content} />
-          {/* <RecommendPosts lang={lang} /> */}
+          <RecommendPosts lang={lang} />
         </main>
       </div>
     </>

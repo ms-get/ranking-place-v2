@@ -1,11 +1,11 @@
 import { Post } from "@/components/post";
-import { posts } from "@/constants/posts";
+import { enPosts } from "@/constants/enPosts";
 import { generateMetadataImpl } from "@/helpers/generateMetadata";
 
-export const generateMetadata = generateMetadataImpl("ko", posts);
+export const generateMetadata = generateMetadataImpl("ko", enPosts);
 
 export async function generateStaticParams() {
-  return posts.map((post) => ({
+  return enPosts.map((post) => ({
     id: post.id.toString(),
   }));
 }
