@@ -40,6 +40,7 @@ const RAW_RUNTIME_STATE =
           ["husky", "npm:9.0.11"],\
           ["lint-staged", "npm:15.2.2"],\
           ["next", "virtual:3e346292aa0e67b0fc34151fd76d497d6aac9cf88029313b0e0d392b18e5a0702e9b8a1cd891ee9e883260a1fcee7b4f4828acd11655ba836fe2d794110a9c30#npm:13.5.6"],\
+          ["next-sitemap", "virtual:3e346292aa0e67b0fc34151fd76d497d6aac9cf88029313b0e0d392b18e5a0702e9b8a1cd891ee9e883260a1fcee7b4f4828acd11655ba836fe2d794110a9c30#npm:4.2.3"],\
           ["notion-to-md", "npm:3.1.1"],\
           ["postcss", "npm:8.4.35"],\
           ["prettier", "npm:3.2.5"],\
@@ -160,6 +161,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@babel/runtime", "npm:7.23.9"],\
           ["regenerator-runtime", "npm:0.14.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@corex/deepmerge", [\
+      ["npm:4.0.43", {\
+        "packageLocation": "../../../.yarn/berry/cache/@corex-deepmerge-npm-4.0.43-390ed1175e-10c0.zip/node_modules/@corex/deepmerge/",\
+        "packageDependencies": [\
+          ["@corex/deepmerge", "npm:4.0.43"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4819,6 +4829,32 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["next-sitemap", [\
+      ["npm:4.2.3", {\
+        "packageLocation": "../../../.yarn/berry/cache/next-sitemap-npm-4.2.3-463254c2cb-10c0.zip/node_modules/next-sitemap/",\
+        "packageDependencies": [\
+          ["next-sitemap", "npm:4.2.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:3e346292aa0e67b0fc34151fd76d497d6aac9cf88029313b0e0d392b18e5a0702e9b8a1cd891ee9e883260a1fcee7b4f4828acd11655ba836fe2d794110a9c30#npm:4.2.3", {\
+        "packageLocation": "./.yarn/__virtual__/next-sitemap-virtual-3b8d1db027/4/.yarn/berry/cache/next-sitemap-npm-4.2.3-463254c2cb-10c0.zip/node_modules/next-sitemap/",\
+        "packageDependencies": [\
+          ["next-sitemap", "virtual:3e346292aa0e67b0fc34151fd76d497d6aac9cf88029313b0e0d392b18e5a0702e9b8a1cd891ee9e883260a1fcee7b4f4828acd11655ba836fe2d794110a9c30#npm:4.2.3"],\
+          ["@corex/deepmerge", "npm:4.0.43"],\
+          ["@next/env", "npm:13.5.6"],\
+          ["@types/next", null],\
+          ["fast-glob", "npm:3.3.2"],\
+          ["minimist", "npm:1.2.8"],\
+          ["next", "virtual:3e346292aa0e67b0fc34151fd76d497d6aac9cf88029313b0e0d392b18e5a0702e9b8a1cd891ee9e883260a1fcee7b4f4828acd11655ba836fe2d794110a9c30#npm:13.5.6"]\
+        ],\
+        "packagePeers": [\
+          "@types/next",\
+          "next"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["node-fetch", [\
       ["npm:2.7.0", {\
         "packageLocation": "../../../.yarn/berry/cache/node-fetch-npm-2.7.0-587d57004e-10c0.zip/node_modules/node-fetch/",\
@@ -5525,6 +5561,7 @@ const RAW_RUNTIME_STATE =
           ["husky", "npm:9.0.11"],\
           ["lint-staged", "npm:15.2.2"],\
           ["next", "virtual:3e346292aa0e67b0fc34151fd76d497d6aac9cf88029313b0e0d392b18e5a0702e9b8a1cd891ee9e883260a1fcee7b4f4828acd11655ba836fe2d794110a9c30#npm:13.5.6"],\
+          ["next-sitemap", "virtual:3e346292aa0e67b0fc34151fd76d497d6aac9cf88029313b0e0d392b18e5a0702e9b8a1cd891ee9e883260a1fcee7b4f4828acd11655ba836fe2d794110a9c30#npm:4.2.3"],\
           ["notion-to-md", "npm:3.1.1"],\
           ["postcss", "npm:8.4.35"],\
           ["prettier", "npm:3.2.5"],\

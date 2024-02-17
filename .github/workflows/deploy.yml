@@ -13,7 +13,7 @@ jobs:
         run: yarn install --immutable --immutable-cache
 
       - name: Build
-        run: yarn build
+        run: yarn build && yarn next-sitemap && yarn build
 
       - name: Deploy
         env:
