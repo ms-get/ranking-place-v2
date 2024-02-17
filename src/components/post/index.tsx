@@ -4,8 +4,11 @@ import { exampleData } from "@/app/[id]/constants";
 import { useScroll } from "@/hooks/useScroll";
 import { Header } from "../header";
 import Image from "next/image";
+import { Markdown } from "./Markdown";
+import { post } from "@/constants/post";
+import { postType } from "@/constants/post";
 
-export const Post = () => {
+export const Post = ({}: postType) => {
   const { title, subTitle, date, image, content, articles } = exampleData;
   const { scaleImageSize, scrollOpacity } = useScroll();
 
@@ -32,7 +35,9 @@ export const Post = () => {
           </div>
         </div>
         <main className="relative z-10 top-0 flex flex-col items-center bg-white pt-10 pb-20">
-          <section className="max-w-[800px] px-4 w-full mb-10 whitespace-pre-wrap ">{content}</section>
+          <section className="max-w-[800px] px-4 w-full mb-10 whitespace-pre-wrap ">
+            <Markdown content={post[1].content} />
+          </section>
           <aside className="max-w-[1140px] w-full px-3 xl:px-2">
             <p className="my-4 text-left w-full text-xl font-bold xl:w-[560px] mx-auto">추천 아티클</p>
             <div className="flex flex-wrap xl:flex-col gap-4 justify-start items-center">

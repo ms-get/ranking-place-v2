@@ -33,6 +33,9 @@ export const makePostFile = (posts: PartialDatabaseObjectResponse[], fileName: s
       };
     }),
   ).then((post) => {
-    fs.writeFileSync(`./src/constants/${fileName}.ts`, `export const ${fileName} = ${JSON.stringify(post)}`);
+    fs.writeFileSync(
+      `./src/constants/${fileName}.ts`,
+      `export const ${fileName} = ${JSON.stringify(post)} as const\n\nexport type ${fileName}Type= (typeof ${fileName})[number]`,
+    );
   });
 };
