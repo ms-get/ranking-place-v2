@@ -29,6 +29,7 @@ export const makePostFile = (posts: PartialDatabaseObjectResponse[], fileName: s
         lastModified: getDate(post),
         description: getText(post, "meta-description"),
         title: getText(post, "meta-title"),
+        image: getText(post, "image"),
         content: mdString.parent,
       };
     }),
